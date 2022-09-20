@@ -25,6 +25,6 @@ Data is stored in H2 inmemory database accessible at address <strong>http://loca
 
 The default credentials for login are:
  *   Driver Class - org.h2.Driver
- *   JDBC URL - jdbc:h2:~/test
+ *   JDBC URL - jdbc:h2:mem:gamadb
  *   User Name - sa
  *   Password - password
