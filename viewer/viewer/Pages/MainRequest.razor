@@ -1,0 +1,28 @@
+@page "/"
+@layout EmptyLayout
+
+
+<div class="newRequest">
+     <RadzenCard Style="width: 500px;">
+         <h2 class="mb-4"  style="text-align:center">Contact us</h2>
+         <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3" class="mb-0">Kind of request</RadzenText>
+         <RadzenDropDown Data="@_types" TextProperty="name" @bind-Value="newRequest.type" Class="w-100" />
+         
+         <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3" class="mb-0">Policy number</RadzenText>
+         <RadzenTextBox  @bind-Value="newRequest.policyNumber"  Class="w-100"  />
+         
+         <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3" class="mb-0">Name</RadzenText>
+         <RadzenTextBox  @bind-Value="newRequest.name"  Class="w-100" />
+         
+         <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3" class="mb-0">Surame</RadzenText>
+         <RadzenTextBox  @bind-Value="newRequest.surname"  Class="w-100" />
+         
+         <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3" class="mb-0">Your request</RadzenText>
+         <RadzenTextArea MaxLength="500"  @bind-Value="newRequest.message"  Class="w-100" />
+         
+         <RadzenButton ButtonStyle="ButtonStyle.Primary"
+                                               Text="SEND REQUEST"
+                                               Click="() => Summit()"/>
+         
+     </RadzenCard>
+</div>

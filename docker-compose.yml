@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+
+  backend_lundegaard-service:
+    build: ./simple_back
+    container_name: back
+    image: backend_lundegaard
+    hostname: backend_lundegaard
+    ports:
+      - "8080:8080"
+
+
+  web_lundegaard-service:
+    build: ./viewer/viewer
+    container_name: viewer
+    hostname: web_lundegaard
+    image: web_lundegaard
+
+    ports:
+      - "80:80"
+    depends_on:
+      - backend_lundegaard-service
+
+
